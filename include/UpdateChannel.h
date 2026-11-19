@@ -66,10 +66,16 @@
  */
 
 /* The manifest. One static file, all boards, no parameters -- see above. */
+/* CYD Apps: both addresses can be set per build, so a build published
+ * somewhere else points its players back to where it came from. */
+#ifndef BRAINO_UPDATE_MANIFEST_URL
 #define BRAINO_UPDATE_MANIFEST_URL \
     "https://iamankushpandit.github.io/Gume/firmware/latest.txt"
+#endif
 
 /* What About tells the owner to type. Shown, never fetched. Kept without a
  * scheme because it has to fit a 320px panel next to a label, and a person
  * typing it into a browser does not need one. */
+#ifndef BRAINO_UPDATE_PAGE_URL
 #define BRAINO_UPDATE_PAGE_URL "iamankushpandit.github.io/Gume"
+#endif
